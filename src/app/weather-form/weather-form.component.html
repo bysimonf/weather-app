@@ -1,11 +1,4 @@
 <label>Please enter a season here: </label>
 <input [(ngModel)]="enteredSeason" type="text">
 <button (click)="updateSeason()">Submit entered season</button>
-<p>{{ msg }}</p>
-<!--
-<img *ngIf="enteredSeason === 'spring'" src="/assets/spring.jpg" width="400">
-<img *ngIf="enteredSeason === 'summer'" src="/assets/summer.jpg" width="400">
-<img *ngIf="enteredSeason === 'fall'" src="/assets/fall.jpg" width="400">
-<img *ngIf="enteredSeason === 'winter'" src="/assets/winter.jpg" width="400">
--->
-<img src="{{ seasonImg }}" width="400">
+<weather-info-card [seasonInfoChild]="enteredSeason"></weather-info-card>
